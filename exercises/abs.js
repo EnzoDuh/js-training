@@ -10,10 +10,9 @@
  */
 
 // Your code :
-function abs(){
-    return Math.abs(1 - 2);
+function abs (number){
+    return Math.max(number, -number)
 }
-console.log(abs(1, 2));
 
 
 
