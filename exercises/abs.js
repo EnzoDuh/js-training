@@ -10,8 +10,8 @@
  */
 
 // Your code :
-function abs (number){
-    return Math.max(number, -number)
+function abs(number){
+    return Math.max(number,-number)
 }
 
 
