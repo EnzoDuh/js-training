@@ -8,6 +8,10 @@
  */
 
 // Your code :
+let myArray = [0, 0, 0, 0];
+return(myArray.length)
+    
+
 
 //* Begin of tests
 const assert = require('assert')
