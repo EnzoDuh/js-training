@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 /*
  * Create a function `multiply` that takes two number arguments
@@ -9,30 +9,30 @@
  */
 
 // Your code :
-const num1 = 4;
-const num2 = 3;
-let total = 0;
-let i = 1;
-function multiply (num1, num2){
-    while (i <= num2){
-        (total = total + num1);
-        i++
-    }
-}
-return total
-//* Begin of tests
-const assert = require('assert')
+function multiply(x, y) {
+  if (x == 0 || y == 0) {
+    return 0;
+  } else if (y < 0) {
+    return -multiply(x, -y);
+  } else if (y > 0) {
+    return x + multiply(x, y - 1);
+  }
 
-assert.strictEqual(typeof multiply, 'function')
-assert.strictEqual(multiply.length, 2)
-assert.strictEqual(multiply.toString().includes('Math.imul'), false)
-assert.strictEqual(multiply.toString().includes('*'), false)
-assert.strictEqual(multiply.toString().includes('/'), false)
-assert.strictEqual(multiply(34, 78), 2652)
-assert.strictEqual(multiply(123, 0), 0)
-assert.strictEqual(multiply(0, -230), 0)
-assert.strictEqual(multiply(0, 0), 0)
-assert.strictEqual(multiply(123, -22), -2706)
-assert.strictEqual(multiply(-22, 123), -2706)
-assert.strictEqual(multiply(-22, -123), 2706)
+  return 0;
+}
+//* Begin of tests
+const assert = require("assert");
+
+assert.strictEqual(typeof multiply, "function");
+assert.strictEqual(multiply.length, 2);
+assert.strictEqual(multiply.toString().includes("Math.imul"), false);
+assert.strictEqual(multiply.toString().includes("*"), false);
+assert.strictEqual(multiply.toString().includes("/"), false);
+assert.strictEqual(multiply(34, 78), 2652);
+assert.strictEqual(multiply(123, 0), 0);
+assert.strictEqual(multiply(0, -230), 0);
+assert.strictEqual(multiply(0, 0), 0);
+assert.strictEqual(multiply(123, -22), -2706);
+assert.strictEqual(multiply(-22, 123), -2706);
+assert.strictEqual(multiply(-22, -123), 2706);
 // End of tests */
